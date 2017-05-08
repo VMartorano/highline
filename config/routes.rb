@@ -4,8 +4,8 @@ Rails.application.routes.draw do
 
   devise_for :users, :controllers => { registrations: 'registrations' }
   #
-  # resoures :products do
-  #   resoures :reviews
-  # end
+  resources :products do
+    resources :reviews
+  end
 
 end

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  thc_content: 9.99
+  about: MyString
+  uses: MyString
+  effect: MyString
+
+two:
+  name: MyString
+  thc_content: 9.99
+  about: MyString
+  uses: MyString
+  effect: MyString
