@@ -3,6 +3,11 @@
   <head>
     <link rel="icon" href="http://images.clipartpanda.com/weed-leaf-leafcircle.png">
     <title>Highline</title>
+
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' %>
+
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -10,14 +15,50 @@
   </head>
 
   <body>
-    <nav>
-      <p class="nav-bar">
-        
-      </p>
-    </nav>
-    <%= yield %>
+    <body>
 
+        <ul class="nav">
+          <p class="navbar-text pull-right">
+          <% if user_signed_in? %>
+            Logged in as <strong><%= current_user.email %></strong>.
+            <%= link_to 'Home', "home_path", :class => 'navbar-link' %>
+
+            <%= link_to "About", home_about_path, :class => 'navbar-link'  %>
+
+            <%= link_to "Latest Research", home_medical_path, :class => 'navbar-link'  %>
+
+            <%= link_to "Products", products_index_path,  :class => 'navbar-link'  %>
+
+            <!-- <%= link_to "Contact", new_boat_path,  :class => 'navbar-link'  %> -->
+
+            <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+
+
+          <% else %>
+            <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %>
+            <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+          <% end %>
+          </p>
+        </ul>
+
+
+        <% if notice %>
+          <p class="alert alert-success"><%= notice %></p>
+        <% end %>
+        <% if alert %>
+          <p class="alert alert-danger"><%= alert %></p>
+        <% end %>
+
+        <%= yield %>
+
+
+
+
+<!--
     <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <p class="alert"><%= alert %></p> -->
+
+
+
   </body>
 </html>
