@@ -13,11 +13,3 @@
  *= require_tree .
  *= require_self
  */
-
-@import "bootstrap";
-
-
-nav{
-  align-items: center;
-
-}
