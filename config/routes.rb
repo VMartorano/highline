@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-
-  get "/" => "home#index", as: "home"
+  root to: "home#index"
+  # get "/" => "home#index", as: "home"
   get "/medical" => "home#medical"
   get "/about" ,:to => "home#about"
   get "/contact" => "home#contact"
@@ -15,5 +15,6 @@ Rails.application.routes.draw do
   end
 
 require 'bootstrap'
+require 'sendgrid-ruby'
 
 end

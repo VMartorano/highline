@@ -3,18 +3,19 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #statue {
-  background-image: url("images/statue_of_liberty.png");
+
   width: 100px;
   margin-left: 0;
   display: inline;
 }
 
-h1 {
+#home-header {
   font-size: 120px;
   font-family: "Megrim";
   font-weight: bolder;
   margin-top: -15px;
-  text-align: center;
+  text-align: left;
+  color: #343434;
 }
 
 /*----landing slides----*/
@@ -45,7 +46,6 @@ these make the slideshow work
 
   -webkit-transition: opacity 1s;
     -moz-transition: opacity 1s;
-    -o-transition: opacity 1s;
     transition: opacity 1s;
 }
 
@@ -57,7 +57,7 @@ these make the slideshow work
 
 .controls{
 	display: none;
-  background: #01A611;
+  background: green;
   color: white;
   padding: 10px 0px;
   font-size: 20px;
@@ -108,7 +108,7 @@ just for appearance;
 .controls:hover,
 .controls:focus{
   background: white;
-  color: #01A611;
+  color: green;
 }
 
 .gallery-container{

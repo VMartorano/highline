@@ -1,6 +1,23 @@
 @import "bootstrap";
 
 
+.nav {
+  background-color: #343434;
+  margin-bottom: 25px;
+  text-decoration: none;
+  color: white;
+  font-size: 14
+
+}
+
+.navbar-link {
+  text-align: right;
+  color: white;
+}
+// .nav:hover {
+//   background-color: white;
+//   color: #343434;
+// }
 
 //
 // .nav {

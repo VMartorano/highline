@@ -7,59 +7,60 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' %>
 
-    <%= stylesheet_link_tag    'application', media: 'all'%>
-    <%= javascript_include_tag 'application'%>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application'  %>
+
   </head>
 
   <body>
 
-        <ul class="nav">
-          <p class="navbar_text_pull_right">
-          <% if user_signed_in? %>
-            Logged in as <strong><%= current_user.email %></strong>.
-            <%= link_to 'Home', home_path, :class => 'navbar-link' %>
+    <ul class="nav">
+      <p class="navbar_text_pull_right">
+      <% if user_signed_in? %>
+        Logged in as <strong><%= current_user.email %></strong>.
+        <%= link_to "Home", root_path, :class => 'navbar-link' %> |
 
-            <%= link_to "About", about_path, :class => 'navbar-link'  %>
+        <%= link_to "About", about_path, :class => 'navbar-link'  %> |
 
-            <%= link_to "Latest Research", medical_path, :class => 'navbar-link'  %>
+        <%= link_to "Latest Research", medical_path, :class => 'navbar-link'  %> |
 
-            <%= link_to "Products", products_path,  :class => 'navbar-link'  %>
+        <%= link_to "Products", products_path,  :class => 'navbar-link'  %> |
 
-            <%= link_to "Contact", contact_path,  :class => 'navbar-link'  %>
+        <%= link_to "Contact", contact_path,  :class => 'navbar-link'  %> |
 
-            <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-
-
-          <% else %>
-            <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %>
-            <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-          <% end %>
-          </p>
-        </ul>
+        <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %> |
 
 
-        <% if notice %>
-          <p class="alert alert-success"><%= notice %></p>
-        <% end %>
-        <% if alert %>
-          <p class="alert alert-danger"><%= alert %></p>
-        <% end %>
+      <% else %>
+        <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %>
+        <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+      <% end %>
+      </p>
+    </ul>
 
-        <%= yield %>
 
-        <br>
-  <br><br><br><br>
-  <div class="disclaimer">
-    <footer>
+    <% if notice %>
+      <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
 
-      <p>WARNING! THIS IS NOT A REAL WEBSITE. WE ARE NOT SELLING ANYTHING HERE. THIS IS A SCHOOL PROJECT FOR THE NEW YORK CODE AND DESIGN ACADEMY. WE ARE LEARNING HOW TO MAKE WEBSITES AND APPS. THIS WEBSITE IS NOT INTENDED FOR ACTUAL USE, IT IS FOR THE SOLE PURPOSE OF LEARNING HOW TO MAKE WEBSITES AND APPS WITH THE NEW YORK CODE AND DESIGN ACADEMY.</p>
+    <%= yield %>
 
-      <p>The information provided on this website is for general information purposes only. While we endeavor to keep the information up to date and correct, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability or suitability of the information contained on the website for any purpose. Any reliance you place on such information is therefore strictly at your own risk.</p>
+    <br>
+    <br><br><br><br>
+    <div class="disclaimer">
+      <footer>
 
-      <p>In no event will we be liable for any loss or damage including without limitation, indirect or consequential loss or damage, or any loss or damage whatsoever arising from loss of data or profits arising out of, or in connection with, the use of this website.</p>
+        <p>WARNING! THIS IS NOT A REAL WEBSITE. WE ARE NOT SELLING ANYTHING HERE. THIS IS A SCHOOL PROJECT FOR THE NEW YORK CODE AND DESIGN ACADEMY. WE ARE LEARNING HOW TO MAKE WEBSITES AND APPS. THIS WEBSITE IS NOT INTENDED FOR ACTUAL USE, IT IS FOR THE SOLE PURPOSE OF LEARNING HOW TO MAKE WEBSITES AND APPS WITH THE NEW YORK CODE AND DESIGN ACADEMY.</p>
 
-    </footer>
-  </div>
+        <p>The information provided on this website is for general information purposes only. While we endeavor to keep the information up to date and correct, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability or suitability of the information contained on the website for any purpose. Any reliance you place on such information is therefore strictly at your own risk.</p>
+
+        <p>In no event will we be liable for any loss or damage including without limitation, indirect or consequential loss or damage, or any loss or damage whatsoever arising from loss of data or profits arising out of, or in connection with, the use of this website.</p>
+
+      </footer>
+    </div>
 
 
   </body>
