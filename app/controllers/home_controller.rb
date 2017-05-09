@@ -14,7 +14,7 @@ class HomeController < ApplicationController
 
   def contact
 
-    post "/form-response" do
+
     # set the from, subject and to addresses
     from = SendGrid::Email.new(email: params[:from])
     subject = params[:subject]
@@ -37,8 +37,6 @@ class HomeController < ApplicationController
     puts response.body
 
 
-    redirect "/contact"
-    #you can use these params as input to an email form (subject, from to etc)
     end
   end
 end
