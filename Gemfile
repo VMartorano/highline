@@ -37,6 +37,8 @@ gem 'jbuilder', '~> 2.5'
 
 gem "devise"
 
+gem "sendgrid-ruby"
+
 gem 'bootstrap', '~> 4.0.0.alpha6'
 
 
