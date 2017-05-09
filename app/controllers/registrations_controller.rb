@@ -3,7 +3,6 @@ class RegistrationsController < Devise::RegistrationsController
     @user = User.new
   end
 
-
   private
 
  def sign_up_params
