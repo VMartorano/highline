@@ -21,15 +21,15 @@
           <p class="navbar-text pull-right">
           <% if user_signed_in? %>
             Logged in as <strong><%= current_user.email %></strong>.
-            <%= link_to 'Home', "home_path", :class => 'navbar-link' %>
+            <%= link_to 'Home', home_path, :class => 'navbar-link' %>
 
-            <%= link_to "About", home_about_path, :class => 'navbar-link'  %>
+            <%= link_to "About", about_path, :class => 'navbar-link'  %>
 
-            <%= link_to "Latest Research", home_medical_path, :class => 'navbar-link'  %>
+            <%= link_to "Latest Research", medical_path, :class => 'navbar-link'  %>
 
-            <%= link_to "Products", products_index_path,  :class => 'navbar-link'  %>
+            <%= link_to "Products", products_path,  :class => 'navbar-link'  %>
 
-            <!-- <%= link_to "Contact", new_boat_path,  :class => 'navbar-link'  %> -->
+            <%= link_to "Contact", contact_path,  :class => 'navbar-link'  %>
 
             <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
 
@@ -52,11 +52,15 @@
         <%= yield %>
 
 
+    <footer>
 
+      WARNING! THIS IS NOT A REAL WEBSITE. WE ARE NOT SELLING ANYTHING HERE. THIS IS A SCHOOL PROJECT FOR THE NEW YORK CODE AND DESIGN ACADEMY. WE ARE LEARNING HOW TO MAKE WEBSITES AND APPS. THIS WEBSITE IS NOT INTENDED FOR ACTUAL USE, IT IS FOR THE SOLE PURPOSE OF LEARNING HOW TO MAKE WEBSITES AND APPS WITH THE NEW YORK CODE AND DESIGN ACADEMY.
 
-<!--
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p> -->
+    The information provided on this website is for general information purposes only. While we endeavor to keep the information up to date and correct, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability or suitability of the information contained on the website for any purpose. Any reliance you place on such information is therefore strictly at your own risk.
+
+    In no event will we be liable for any loss or damage including without limitation, indirect or consequential loss or damage, or any loss or damage whatsoever arising from loss of data or profits arising out of, or in connection with, the use of this website.
+
+</footer>
 
 
 

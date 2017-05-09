@@ -1,12 +1,10 @@
 class RegistrationsController < Devise::RegistrationsController
   def new
     @user = User.new
-    # puts sign_up_params.inspect
   end
 
 def create
-  puts "HERE"
-  puts sign_up_params.inspect
+
     @user = User.create(sign_up_params)
 
 
