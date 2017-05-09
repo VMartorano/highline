@@ -1,3 +1,128 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#statue {
+  background-image: url("images/statue_of_liberty.png");
+  width: 100px;
+  margin-left: 0;
+  display: inline;
+}
+
+h1 {
+  font-size: 120px;
+  font-family: "Megrim";
+  font-weight: bolder;
+  margin-top: -15px;
+  text-align: center;
+}
+
+/*----landing slides----*/
+/*
+essential styles:
+these make the slideshow work
+*/
+#slides{
+	position: relative;
+	height: -20px;
+  width: 100%;
+	padding-bottom: 36.7%;
+	margin-bottom: 10px;
+	list-style-type: none;
+  // margin-top: 10px;
+  // margin-left: 35%;
+  // margin-right: 35%;
+}
+
+.slide{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	z-index: 1;
+
+  -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+}
+
+.showing{
+	opacity: 1;
+	z-index: 2;
+}
+
+
+.controls{
+	display: none;
+  background: #01A611;
+  color: white;
+  padding: 10px 0px;
+  font-size: 20px;
+  cursor: pointer;
+  border: 2px solid white;
+  margin: 750px 0px 0px 5px;
+  width: 30px;
+}
+
+
+/*
+non-essential styles:
+just for appearance;
+*/
+
+.slide{
+	font-size: 40px;
+	padding: 40px;
+	box-sizing: border-box;
+	background: transparent;
+  background-size: cover;
+}
+
+.slide:nth-of-type(1){
+  background-image: url("weed_leaves.jpg");
+}
+
+.slide:nth-of-type(2){
+  background-image: url("tasman_haze_sativa.jpg");
+}
+
+.slide:nth-of-type(3){
+  background-image: url("greenhouse.jpg");
+}
+
+.slide:nth-of-type(4){
+  background-image: url("joint.jpg");
+}
+
+.slide:nth-of-type(5){
+  background-image: url("brownie.jpg");
+}
+
+.slide:nth-of-type(6){
+  background-image: url("shatter.jpg");
+}
+
+.controls:hover,
+.controls:focus{
+  background: white;
+  color: #01A611;
+}
+
+.gallery-container{
+  position: relative;
+}
+
+.buttons{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 10;
+  font-size: 0px;
+}
+
+.gallery-buttons {
+  margin-top: -760px;
+}

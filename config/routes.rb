@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get "/medical" => "home#medical"
   get "/about" ,:to => "home#about"
   get "/contact" => "home#contact"
+  get "/videos" => "home#videos"
 
 
 

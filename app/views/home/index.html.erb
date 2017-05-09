@@ -1,1 +1,31 @@
-<h1>Highline</h1>
+<div id="statue">
+  <h1>
+    <%= image_tag("statue_of_liberty.png", :size => "90x180") %>HIgHLINE
+  </h1>
+</div>
+
+
+
+
+<div class="slideshow">
+
+  <div class="gallery-container">
+    <ul id="slides">
+      <li id = "leaves" class = "slide showing"></li>
+      <li id = "tasman" class = "slide"></li>
+      <li id = "greenhouse" class = "slide"></li>
+      <li id = "joint" class = "slide"></li>
+      <li id = "brownie" class = "slide"></li>
+      <li id = "shatter" class = "slide"></li>
+    </ul>
+  </div>
+
+  <center><div class="gallery-buttons">
+      <button class="controls" id="previous">&lt;</button>
+      <button class="controls" id="pause">&#10074;&#10074;</button>
+      <button class="controls" id="next">&gt;</button>
+  </div></center>
+
+</div>
+
+<script type="text/coffeescript" src="home.js"></script>

@@ -3,18 +3,6 @@ class RegistrationsController < Devise::RegistrationsController
     @user = User.new
   end
 
-def create
-
-    @user = User.create(sign_up_params)
-
-
-    if @user.save
-      flash[:notice] = "User successfully created"
-      redirect_to "/"
-    else
-      render :new
-    end
-end
 
   private
 
