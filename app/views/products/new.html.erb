@@ -1,0 +1,15 @@
+<%= form_for @product, :url => products_path, :html => { :multipart => true } do |form| %>
+  <%= form.file_field :visual %>
+  <br>
+  <%= form.text_field :name, placeholder: "Product name" %>
+  <br>
+  <%= form.text_field :thc_content, placeholder: "THC Content" %>
+  <br>
+  <%= form.text_area :about, placeholder: "About" %>
+  <br>
+  <%= form.text_area :uses, placeholder: "Uses" %>
+  <br>
+  <%= form.text_area :effect, placeholder: "Effect" %>
+  <br>
+  <%= form.submit ("Post") %>
+<% end %>
