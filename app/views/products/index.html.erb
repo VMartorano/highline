@@ -1,11 +1,12 @@
 
   <div class="container">
     <div class="inner">
-      <br>
-      <% @products.each do |product| %>
-        <!-- displays product pic and name -->
+      <div class="grid">
         <br>
-          <div class="box">
+        <% @products.each do |product| %>
+          <!-- displays product pic and name -->
+          <br>
+          <div class="box grid-item">
             <%= image_tag product.visual.url(:medium) %>
             <br>
             <strong><%= link_to(product.name, product_path(product)) %></strong>
@@ -13,19 +14,15 @@
             <!-- displays product content -->
             <%= product.variety %>
             <br>
-            <%= product.thc_content %>%
+            THC Content: <%= product.thc_content %>%
             <br>
             <%= product.about %>
             <br>
-            <%= product.uses %>
-            <br>
-            <%= product.effect %>
-            <br>
-
             <%= link_to("Write a review", new_product_review_path(product)) %>
             <br>
             <br>
           </div>
-    <% end %>
+          <% end %>
+      </div>
     </div>
   </div>
