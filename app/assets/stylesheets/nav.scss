@@ -6,30 +6,26 @@
   margin-bottom: 25px;
   text-decoration: none;
   color: white;
-  font-size: 14
+  font-size: 15px;
+  height: 60px;
 
 }
 
 .navbar-link {
-  text-align: right;
   color: white;
-}
-// .nav:hover {
-//   background-color: white;
-//   color: #343434;
-// }
+  display:inline-block;
 
-//
-// .nav {
-//
-// background-image: image-url('skylinecopyrc.jpg');
-// background-repeat:no-repeat;
-// background-size:100% 100%;
-//
-// }
-//
-//
-//
-// .navbar_text_pull_right{
-//   height: 200px;
-// }
+}
+
+.navbar_text_pull_right{
+// align-self: center;
+align-self: flex-end;
+text-align: inherit;
+padding-left: 650px;
+}
+
+.disclaimer{
+  font-size: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
