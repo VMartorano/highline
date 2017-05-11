@@ -1,28 +1,30 @@
 
   <div class="container">
     <div class="inner">
-      <br>
-      <% @products.each do |product| %>
-        <!-- displays product title -->
+      <div class="grid">
         <br>
-          <div class="box">
-            <%= image_tag product.visual.url(:medium) %>
-            <strong><%= link_to(product.name, product_path(product)) %></strong>
+          <% @products.each do |product| %>
+            <!-- displays product title -->
             <br>
-            <!-- displays product content -->
-            <%= product.thc_content %>%
-            <br>
-            <%= product.about %>
-            <br>
-            <%= product.uses %>
-            <br>
-            <%= product.effect %>
-            <br>
+              <div class="box grid-item">
+                <%= image_tag product.visual.url(:medium) %>
+                <strong><%= link_to(product.name, product_path(product)) %></strong>
+                <br>
+                <!-- displays product content -->
+                <%= product.thc_content %>%
+                <br>
+                <%= product.about %>
+                <br>
+                <%= product.uses %>
+                <br>
+                <%= product.effect %>
+                <br>
 
-            <%= link_to("Write a review", new_product_review_path(product)) %>
-            <br>
-            <br>
-          </div>
-    <% end %>
+                <%= link_to("Write a review", new_product_review_path(product)) %>
+                <br>
+                <br>
+              </div>
+        <% end %>
+      </div>
     </div>
   </div>
