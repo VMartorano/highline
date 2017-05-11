@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get "/video3" => "home#video3"
   get "/video4" => "home#video4"
   get "/video5" => "home#video5"
+  get "/video6" => "home#video6"
 
 
 

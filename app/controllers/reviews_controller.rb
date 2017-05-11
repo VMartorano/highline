@@ -7,7 +7,9 @@ class ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
     @review.product_id = params[:product_id]
-    @review.user_id = session[:user_id]
+    @review.user_id = current_user.id
+
+    puts params.inspect
 
     if @review.save
       flash[:notice] = "Review sumbitted."
@@ -60,7 +62,7 @@ class ReviewsController < ApplicationController
 
 
   def review_params
-    params.require(:review).permit(:content, :used_for, :user_id, :product_id)
+    params.require(:review).permit(:content, :used_for)
   end
 
 end

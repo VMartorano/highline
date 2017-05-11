@@ -5,6 +5,7 @@ class HomeController < ApplicationController
   skip_before_filter  :verify_authenticity_token
 
   def index
+    # get "home#index"
   end
 
   def medical
@@ -62,7 +63,10 @@ class HomeController < ApplicationController
 
   def video5
   end
-  
+
+ def video6
+ end
+ 
 
 
 end
