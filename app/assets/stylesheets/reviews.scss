@@ -1,3 +1,21 @@
 // Place all the styles related to the reviews controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.review-form {
+  width: 50%;
+  background-color: #343434;
+  opacity:.7;
+  color: white;
+  border-radius: 20px;
+  font-family: "Josefin Sans";
+}
+
+::placeholder {
+  color: black;
+  font-family: "Josefin Sans";
+}
+.review-area {
+  color: #343434;
+  font-family: "Josefin Sans";
+  width: 30%;
+}

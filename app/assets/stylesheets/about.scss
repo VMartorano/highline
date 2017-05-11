@@ -1,0 +1,46 @@
+.statue {
+  width: 60px;
+  height: 120px;
+}
+
+.about-box {
+  width: 80%;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+.about-text {
+  font-size: 1.5em;
+  color: #343434;
+  width: 60%;
+}
+
+#about-text-1 {
+  float:right;
+  vertical-align: middle;
+  margin-top: 7%;
+
+}
+#about-text-2{
+  float:left;
+  vertical-align: middle;
+  margin-top: 4%;
+}
+
+.about-pic-1 {
+  width: 30%;
+}
+
+.about-pic-2 {
+  margin-left: 3%;
+  width: 30%;
+}
+
+.about-h2 {
+  color:green;
+  position:relative;
+  left:5%;
+  font-size: 50px;
+  font-family: "Josefin Sans";
+  font-weight: bolder;
+}

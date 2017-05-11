@@ -1,7 +1,7 @@
 <center>
   <div class="container">
     <div class="inner">
-      <div class="box">
+      <div class="box-show">
         <%= image_tag @product.visual.url(:medium) %>
         <br>
         <strong><%= @product.name %></strong>
@@ -9,24 +9,35 @@
         <!-- displays product content -->
         <%= @product.variety %>
         <br>
-        <%= @product.thc_content %>%
+        <strong>THC Content: </strong><%= @product.thc_content %>%
         <br>
-        <%= @product.about %>
         <br>
-        <%= @product.uses %>
-        <br>
-        <%= @product.effect %>
-        <br>
-        <%= link_to("Write a review", new_product_review_path(@product)) %>
-        <br>
-        <div class="review">
-          <% @reviews.each do |review| %>
-            <%= review.content %>
-            <% if session[:user_id] == review.user_id%>
-              <%= link_to("Edit", edit_product_review_path(@product, review)) %>
-              <%= link_to("Delete", product_review_path(@product, review), method: :delete, data: {confirm: "Are you sure you want to delete this review?"})%>
+        <div class="show-info">
+          <%= @product.about %>
+          <br>
+          <br>
+          <strong>Medical Uses: </strong><%= @product.uses %>
+          <br>
+          <strong>Effects: </strong><%= @product.effect %>
+          <br>
+          <center><%= link_to("Write a review", new_product_review_path(@product)) %></center>
+          <br>
+
+          <div class="review">
+            <% @reviews.each do |review| %>
+
+              <strong><%= review.used_for %></strong>
+              <br>
+              <%= review.content %>
+
+              <% if current_user.id == review.user_id%>
+                <%= link_to("Edit", edit_product_review_path(@product, review)) %>
+                <%= link_to("Delete", product_review_path(@product, review), method: :delete, data: {confirm: "Are you sure you want to delete this review?"})%>
+                <br>
+                <br>
+              <% end %>
             <% end %>
-          <% end %>
+          </div>
         </div>
 
         <br>

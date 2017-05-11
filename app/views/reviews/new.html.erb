@@ -1,16 +1,19 @@
-NEW REVIEW
+
 <center>
   <div class="container">
     <div class="inner">
-      <%= form_for [@product, @review] do |form| %>
-        <br>
-        <%= form.text_field :used_for, placeholder: "What did you use it for?" %>
-        <br>
-        <%= form.text_area :content, placeholder: "Write a review..." %>
-        <br>
-        <%= form.submit ("Post") %>
+      <div class = "review-form">
+        <%= form_for [@product, @review] do |form| %>
+          <br>
+          <%= form.text_field :used_for, placeholder: "What did you use it for?", class: "form-field" %>
+          <br>
+          <br>
+          <%= form.text_area :content, placeholder: "Write a review...", class: "review-area"%>
+          <br>
+          <%= form.submit ("Post"), class: "form-button" %>
 
-      <% end %>
+        <% end %>
+      </div>
     </div>
   </div>
 </center>
