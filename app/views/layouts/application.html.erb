@@ -2,7 +2,7 @@
 <html>
   <head>
     <link rel="icon" href="http://images.clipartpanda.com/weed-leaf-leafcircle.png">
-    <link href="https://fonts.googleapis.com/css?family=Megrim" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Megrim|Josefin+Sans" rel="stylesheet">
     <title>Highline</title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' %>
@@ -18,27 +18,32 @@
 
     <ul class="nav">
       <p class="navbar_text_pull_right">
-      <% if user_signed_in? %>
-        Logged in as <strong><%= current_user.email %></strong>
-        <%= link_to "Home", root_path, :class => 'navbar-link' %> |
+        <% if user_signed_in? %>
+          Logged in as <strong><%= current_user.email %></strong>
+          <span id="right-nav-links">
+            <%= link_to "Home", root_path, :class => 'navbar-link' %> |
 
-        <%= link_to "About", about_path, :class => 'navbar-link'  %> |
+            <%= link_to "About", about_path, :class => 'navbar-link'  %> |
 
-        <%= link_to "Latest Research", medical_path, :class => 'navbar-link'  %> |
+            <%= link_to "Latest Research", medical_path, :class => 'navbar-link'  %> |
 
-        <%= link_to "Products", products_path,  :class => 'navbar-link'  %> |
+            <%= link_to "Products", products_path,  :class => 'navbar-link'  %> |
 
-        <%= link_to "Videos", videos_path,  :class => 'navbar-link'  %> |
+            <%= link_to "Videos", videos_path,  :class => 'navbar-link'  %> |
 
-        <%= link_to "Contact", contact_path,  :class => 'navbar-link'  %> |
+            <%= link_to "Contact", contact_path,  :class => 'navbar-link'  %> |
 
-        <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+            <%= link_to "Edit Profile", edit_user_registration_path,  :class => 'navbar-link'  %> |
+
+            <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
 
 
-      <% else %>
-        <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %>
-        <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-      <% end %>
+          <% else %>
+            <%= link_to "Home", root_path, :class => 'navbar-link' %> |
+            <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+            <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+          <% end %>
+        </span>
       </p>
     </ul>
 

@@ -19,8 +19,8 @@
 
 .navbar_text_pull_right{
 // align-self: center;
-align-self: flex-end;
-text-align: inherit;
+  align-self: flex-end;
+// text-align: inherit;
 // padding-left: 400px;
 // padding-right: 20px;
 }
@@ -32,4 +32,17 @@ text-align: inherit;
   background-color: #343434;
   color: white;
   font-size: 12px;
+}
+
+.right-nav-links {
+  float: right;
+}
+
+.alert {
+  margin-top: -25px;
+  margin-bottom: 26px;
+}
+
+p {
+  font-family: "Josefin Sans";
 }

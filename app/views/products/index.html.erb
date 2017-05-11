@@ -1,29 +1,31 @@
-<div class="container">
-  <div class="inner">
-    <div class="grid">
-      <br>
-      <% @products.each do |product| %>
-        <!-- displays product pic and name -->
+<center>
+  <div class="container">
+    <div class="inner">
+      <div class="grid">
         <br>
-        <div class="box grid-item">
-          <%= image_tag product.visual.url(:medium) %>
+        <% @products.each do |product| %>
+          <!-- displays product pic and name -->
           <br>
-          <strong><%= link_to(product.name, product_path(product)) %></strong>
-          <br>
-          <!-- displays product content -->
-          <%= product.variety %>
-          <br>
-          <strong>THC Content: </strong><%= product.thc_content %>%
-          <br>
-          <br>
-          <%= product.about %>
-          <br>
-          <br>
-          <%= link_to("Write a review", new_product_review_path(product)) %>
-          <br>
-          <br>
-        </div>
-        <% end %>
+          <div class="box grid-item">
+            <%= image_tag product.visual.url(:medium) %>
+            <br>
+            <strong><%= link_to(product.name, product_path(product)) %></strong>
+            <br>
+            <!-- displays product content -->
+            <%= product.variety %>
+            <br>
+            <strong>THC Content: </strong><%= product.thc_content %>%
+            <br>
+            <br>
+            <%= product.about %>
+            <br>
+            <br>
+            <%= link_to("Write a review", new_product_review_path(product)) %>
+            <br>
+            <br>
+          </div>
+          <% end %>
+      </div>
     </div>
   </div>
-</div>
+</center>

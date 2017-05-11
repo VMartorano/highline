@@ -14,10 +14,6 @@ left:45px;
   left:45px;
 }
 
-link_to{
-  color: black;
-}
-
  .btn{
    font-size: 25px;
    position:relative;
@@ -25,14 +21,24 @@ link_to{
    border: 2px solid black;
    border-radius:10px;
    box-shadow: 1px 1px 1px 1px;
-   color: black;
+   color: #343434;
+   font-family: "Josefin Sans"
  }
 
-h2{
-color:green;
-position:relative;
-left:50px;
-font-size: 30px;
+
+.video-h3 {
+  text-align: center;
+  margin-left: 10%;
+  font-family: "Josefin Sans";
+  font-size: 24px;
+  color: green;
+  font-weight: bolder;
+}
+
+.videos {
+  width: 60%;
+  margin-right: 10%;
+  margin-left: 25%;
 }
 
 .video1{
@@ -83,5 +89,8 @@ iframe{
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 20px;
+}
 
+hr {
+  margin-right: 23%;
 }
