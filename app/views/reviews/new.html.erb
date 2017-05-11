@@ -1,1 +1,16 @@
 NEW REVIEW
+<center>
+  <div class="container">
+    <div class="inner">
+      <%= form_for [@product, @review] do |form| %>
+        <br>
+        <%= form.text_field :used_for, placeholder: "What did you use it for?" %>
+        <br>
+        <%= form.text_area :content, placeholder: "Write a review..." %>
+        <br>
+        <%= form.submit ("Post") %>
+
+      <% end %>
+    </div>
+  </div>
+</center>

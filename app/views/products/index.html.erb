@@ -3,13 +3,16 @@
     <div class="inner">
       <br>
       <% @products.each do |product| %>
-        <!-- displays product title -->
+        <!-- displays product pic and name -->
         <br>
           <div class="box">
             <%= image_tag product.visual.url(:medium) %>
+            <br>
             <strong><%= link_to(product.name, product_path(product)) %></strong>
             <br>
             <!-- displays product content -->
+            <%= product.variety %>
+            <br>
             <%= product.thc_content %>%
             <br>
             <%= product.about %>

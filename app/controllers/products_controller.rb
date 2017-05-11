@@ -52,7 +52,7 @@ class ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:name, :thc_content, :about, :uses, :effects, :visual)
+    params.require(:product).permit(:name, :thc_content, :about, :uses, :effect, :visual, :variety)
   end
 
 end

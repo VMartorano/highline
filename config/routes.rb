@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get "/contact" => "home#contact"
   get "/videos" => "home#videos"
 
+  post "/form-response" => "home#email"
 
 
   devise_for :users, :controllers => { registrations: 'registrations' }
