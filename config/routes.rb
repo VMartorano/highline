@@ -5,6 +5,15 @@ Rails.application.routes.draw do
   get "/about" ,:to => "home#about"
   get "/contact" => "home#contact"
   get "/videos" => "home#videos"
+  get "/video1" => "home#video1"
+  get "/video2" => "home#video2"
+  get "/video3" => "home#video3"
+  get "/video4" => "home#video4"
+  get "/video5" => "home#video5"
+
+
+
+
 
 
 
