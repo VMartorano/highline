@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170510152506) do
+ActiveRecord::Schema.define(version: 20170510185525) do
 
   create_table "products", force: :cascade do |t|
     t.string   "name"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20170510152506) do
     t.string   "visual_content_type"
     t.integer  "visual_file_size"
     t.datetime "visual_updated_at"
+    t.string   "variety"
   end
 
   create_table "reviews", force: :cascade do |t|

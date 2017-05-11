@@ -11,13 +11,9 @@
                 <strong><%= link_to(product.name, product_path(product)) %></strong>
                 <br>
                 <!-- displays product content -->
+                <%= product.variety %>
+                <br>
                 <%= product.thc_content %>%
-                <br>
-                <%= product.about %>
-                <br>
-                <%= product.uses %>
-                <br>
-                <%= product.effect %>
                 <br>
 
                 <%= link_to("Write a review", new_product_review_path(product)) %>

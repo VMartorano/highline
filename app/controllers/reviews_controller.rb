@@ -14,7 +14,7 @@ class ReviewsController < ApplicationController
       redirect_to product_path(params[:product_id])
     else
       flash[:alert] = "There was a problem adding your review, please try again."
-      redirect_to new_product_review
+      redirect_to new_product_review_path
     end
   end
 
@@ -60,7 +60,7 @@ class ReviewsController < ApplicationController
 
 
   def review_params
-    params.require(:review).permit(:content, :used_for)
+    params.require(:review).permit(:content, :used_for, :user_id, :product_id)
   end
 
 end

@@ -15,6 +15,7 @@ Rails.application.routes.draw do
 
 
 
+  post "/form-response" => "home#email"
 
 
   devise_for :users, :controllers => { registrations: 'registrations' }
