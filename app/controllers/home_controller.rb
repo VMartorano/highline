@@ -66,7 +66,9 @@ class HomeController < ApplicationController
 
  def video6
  end
- 
+
+def video7
+end
 
 
 end
