@@ -19,7 +19,7 @@
     <ul class="nav">
       <p class="navbar_text_pull_right">
         <% if user_signed_in? %>
-          Logged in as <strong><%= current_user.email %></strong>
+
           <span id="right-nav-links">
             <%= link_to "Home", root_path, :class => 'navbar-link' %> |
 
@@ -37,6 +37,7 @@
 
             <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
 
+            |                                 Logged in as <strong><%= current_user.email %></strong>
 
           <% else %>
             <%= link_to "Home", root_path, :class => 'navbar-link' %> |
