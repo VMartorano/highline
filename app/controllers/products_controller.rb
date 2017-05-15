@@ -48,6 +48,10 @@ class ProductsController < ApplicationController
     @reviews = @product.reviews
   end
 
+  def showall
+    @products = Product.all
+    render json: @products
+  end
 
   private
 
