@@ -1,5 +1,9 @@
 # README
 
+HEROKU LINK: https://fast-lake-25946.herokuapp.com/
+
+=======================================================
+# Disclaimer
 
 WARNING! THIS IS NOT A REAL WEBSITE. WE ARE NOT SELLING ANYTHING HERE. THIS IS A SCHOOL PROJECT FOR THE NEW YORK CODE AND DESIGN ACADEMY. WE ARE LEARNING HOW TO MAKE WEBSITES AND APPS. THIS WEBSITE IS NOT INTENDED FOR ACTUAL USE, IT IS FOR THE SOLE PURPOSE OF LEARNING HOW TO MAKE WEBSITES AND APPS WITH THE NEW YORK CODE AND DESIGN ACADEMY.
 
@@ -59,16 +63,23 @@ Is this product useful to a tangible demographic?
 
 You’ll be working on your projects and workshopping in class, but you are expected and encouraged to put in a large amount of work outside of class. You only have one week to build this product, so make sure to keep the term “MVP” in mind!
 
-Best of luck with your projects and as always, questions are encouraged!
+ =========================================================
 
-Grading Criteria:
 
-* Project should run without crashing under normal  circumstances
-* Project demonstrate a clear purpose or goal its attempting to reach
-* Project should demonstrate quality code in all areas
-* Project should have a consistent and approachable UI throughout
-* Project should be somewhat unique
+# Division of work:
 
-* Complete = Meets all grading criteria above.
+Vincent did
+* the homepage slideshow and styling
+* added products, reviews ability and styled the page (aside from masonry).
+* about content and styling
+* contact page content, stying, and sendgrid API
+* styled video page
+* set up devise skeleton, all controllers, all models (and database necessities) and all the pages associated with it.
+* deployed to HEROKU
+* did overall styling
 
-* Incomplete = Does not meet all grading criteria. Needs improvement or missing submission.
+Marcela did:
+* Content and styling for latest research page
+* Content for video page.
+* implemented bootstrap for nav bar
+* implemented masonry for products page
